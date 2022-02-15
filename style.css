@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(219, 250, 233);
+    overflow: hidden;
+}
+
+li{
+   float: right; 
+   margin: 0;
+}
+
+/* li:last-child{
+    float: right;
+    /* background-color: aqua; */
+} */
+
+li i{
+    margin: 18px 15px; 
+}    
+
+li a{
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: rgb(83, 83, 83);
+}
+
+li a.active{
+   color: white;
+   background-color: green;
+}
+
+li a:hover:not(.active){
+    /* tidak berlaku bagi class active */
+    background-color: darkseagreen;
+    color: white;
+}
+
+li input[type=text] {
+    float: left;
+    padding: 6px;
+    margin-top: 13px;
+    border-radius: 0px;
+    border: none;
+    border-top: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    border-right: none;
+    outline: none;
+    /* width: 300px; */
+}
+
+li button{
+    margin-top: 13px;
+    margin-right: 10px;
+    float: right;
+    background-color: rgb(184, 184, 184);
+    padding: 8px 15px;
+    font-family: "Font Awesome 5 Free";
+    border-top: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    border-left: none;
+    border-radius: 0px;
+}
