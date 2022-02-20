@@ -2,12 +2,17 @@ body{
     margin: 0;
     padding: 0;
 }
+
+:root{
+    --background-color:rgb(228, 252, 228);
+    --hover-color: rgb(201, 233, 201);
+}
 a{text-decoration: none;}
 
 nav{
     display: flex;
     justify-content: center;
-    background-color: rgb(228, 252, 228);
+    background-color: var(--background-color);
 }
 
 .navContainer{
@@ -36,13 +41,20 @@ nav{
 }
 
 #menuResp a:hover{
-    background-color: rgb(201, 233, 201);
+    background-color: var(--hover-color);
     transition-duration: 0.4s;
 }
 
 @media screen and (max-width: 700px) {
     #menuResp{
-        display: none;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        padding-left: 10%;
+        background-color: var(--background-color);
+        width: 100vh;
+        transform: translateX(100%);
+        transition: transform 0.8s;
     }
     #toggle{
         display: block;
