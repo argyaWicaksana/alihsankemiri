@@ -3,13 +3,11 @@ function noBorder() {
 }
 
 function toggle() {
-    let x = document.getElementById('toggle')
-    if (x.className =="on") { //tutup
-       x.classList.remove("on") 
-        document.getElementById('menuResp').style.transform = ''
-    } else { //buka
-        x.className+="on"
-        document.getElementById('menuResp').style.transform = 'translateX(0%)'
-    }
+    let x = document.querySelector(".hamburger")
+    let y = document.querySelector(".menu")
+    let hasClass = y.classList.contains('on')
+
+    x.classList.toggle("toggle-anim")
+    y.classList.toggle("menu-anim")
     
 }
