@@ -8,6 +8,16 @@ body{
 a{text-decoration: none;}
 h2, .logo{text-transform: capitalize;}
 
+/* wave */
+.wave{
+    display: block;
+    background-color: white;
+}
+
+.rotate{
+    rotate: 180deg;
+}
+
 /* navbar */
 nav{
     display: flex;
@@ -93,12 +103,12 @@ nav{
 }
 
 
-.container-satu img, .container-satu div{
+.container-satu img, .container-satu div, .container-tiga img{
     display: block;
     width: 45%;
 }
 
-.container-satu div button{
+.container-satu div button, .container-tiga button{
     background-color: green;
     color: white;
     border: 2px solid green;
@@ -108,7 +118,7 @@ nav{
     cursor: pointer;
 }
 
-.container-satu div button:hover{
+.container-satu div button:hover, .container-tiga button:hover{
     background-color: transparent;
     color: green;
 }
@@ -210,37 +220,58 @@ nav{
 .img5{ background-image: url(img/5.jpg); }
 .img6{ background-image: url(img/6.jpg); }
 
-/* coba */
-.coba{
-    background-color: aqua;
-    width: 500px;
-    height: 500px;
-    margin: 100px auto;
-    position: relative;
+.seePhoto{
     display: none;
-}
-
-.coba::before{
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
     top: 0;
-    left: 0;
-    width: 10px;
-    height: 10%;
-    background-color: red;
-    content: "";
-    position: absolute;
-    transform-origin: top left;
-    rotate: -45deg;
-    scale: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.562);
 }
 
-.coba::after{
-    right: 0;
-    bottom: 0;
-    width: 10%;
-    height: 10%;
-    background-color: blue;
-    content: "";
+.closeBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+.closeBtn::after, .closeBtn::before{
+    content: '';
+    background-color: white;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    transform-origin: center right;
+}
+
+.closeBtn::before{
+    rotate: -45deg;
+}
+
+.closeBtn::after{
+    rotate: 45deg;
+    margin-bottom: 6px;
+}
+
+/* konten 3 */
+.container-tiga{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 150px auto;
+}
+
+.container-tiga div{
+    width: 35%;
 }
 
 /* footer */
